@@ -21,10 +21,9 @@ function getDatas() {
 /*
 //problem statement & old approach
 
-function createData(newData,callback) {
+function createData(newData) {
   setTimeout(() => {
     datas.push(newData);
-    callback();
   }, 2000);
 }
 createData({ name: 'mohit', profession: 'locopilot' });
@@ -32,7 +31,6 @@ getDatas();
 // problem because getdata is calling early due to given less time, hence new data not //reflecting 
 
 */
-
 
 /*
 //callback approach to resolve
@@ -44,8 +42,6 @@ function createData(newData,callback) {
 }
 createData({ name: 'mohit', profession: 'locopilot' },getDatas);
 */
-
-
 
 /*
 //Promise approach to resolve
@@ -66,8 +62,6 @@ function createData(newData) {
 }
 createData({ name: 'mohit', profession: 'locopilot' }).then(getDatas).catch(e=> console.log(e));
 */
-
-
 
 /*
 //Async await approach
